@@ -1,0 +1,8 @@
+<h1>Editar tarea</h1>
+
+<form method="POST">
+  {% csrf_token %}
+  <input type="text" name="titulo" value="{{ tarea.titulo }}">
+  <textarea name="descripcion">{{ tarea.descripcion }}</textarea>
+  <button type="submit">Actualizar</button>
+</form>

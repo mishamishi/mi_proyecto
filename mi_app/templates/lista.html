@@ -1,0 +1,12 @@
+<h1>Tareas</h1>
+<a href="/crear/">Nueva tarea</a>
+
+<ul>
+{% for tarea in tareas %}
+  <li>
+    {{ tarea.titulo }}
+    <a href="/editar/{{ tarea.id }}">Editar</a>
+    <a href="/eliminar/{{ tarea.id }}">Eliminar</a>
+  </li>
+{% endfor %}
+</ul>
